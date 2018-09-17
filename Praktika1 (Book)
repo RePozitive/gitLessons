@@ -1,0 +1,21 @@
+package com.company;
+
+public class Book {
+    public static void main(String[] args) {
+        info Book1 = new info();
+        Book1.date = 1967;
+        Book1.author = "Pushkin";
+        Book1.name = "Ghosts";
+        System.out.println ("Автор:"+Book1.author+ ","+" "+"Название:"+Book1.name+","+" "+"Дата:"+Book1.date);
+        Book1.date = 1948;
+        Book1.author = "Anderson";
+        Book1.name = "Sky";
+        System.out.println ("Автор:"+Book1.author+ ","+" "+"Название:"+Book1.name+","+" "+"Дата:"+Book1.date);
+    }
+}
+
+class info {
+    int date;
+    String author;
+    String name;
+}
