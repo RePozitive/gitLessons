@@ -1,0 +1,24 @@
+package com.company;
+
+public class Sorting {
+    public static void main(String[] args) {
+        Integer[] s = new Integer[] {5, 36, 54, 28, 14, 77, 66, 91};
+        for (int i = 0; i < s.length; i++) {
+            int num1 = s[i];
+
+            for (int j = i - 1; j >= 0; j--) {
+                int num2 = s[j];
+
+                if (num1 < num2) {
+                    s[j+1] = num2;
+                    s[j] = num1;
+                } else {
+                    break;
+                }
+            }
+        }
+        for (Integer n : s) {
+            System.out.println("Element s:" + n);
+        }
+    }
+}
