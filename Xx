@@ -1,0 +1,61 @@
+#include <stdio.h>
+#define SIZE 100
+
+char str[SIZE];
+
+int arrio();
+
+int main()
+{
+	printf("Before: ");
+
+	arrio(); // My own input
+
+	int count = 0;
+
+	for (int i = 0; i < SIZE; i++) {
+		if (str[i] >= '0' && str[i] <= '9' ) {
+			count++;
+		}
+	}
+
+	char strNum[count];
+
+	int mem = 0;
+
+	for ( int j = 0; j < count;  j++) {
+	for (int i = mem; i < SIZE; i++) {
+		if (( str[i] >= '0' ) && ( str[i] <= '9' )) {
+			strNum[j] = str[i];
+			mem = i+1;
+			break;
+			}
+		}
+	}
+
+	printf( "After: " );
+
+	for (int i = 0; i < count; i++) {
+		printf( "%c", strNum[i] );
+	}
+
+	return 0;
+}
+
+int arrio()
+{
+    int i=0, k=0, iMem=0;
+    while(k==0)
+    {
+        str[i] = getchar();
+        if (str[i]=='\n')
+        {
+            str[i]='\0';
+            k=1;
+        }
+        i++;
+    }
+    iMem=i;
+
+    return iMem;
+}
